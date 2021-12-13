@@ -52,6 +52,7 @@ void loop() {
   if (btnState == LOW) {
     if (millis() - lastButtonPress > 50) {
       Serial.println("Button pressed!");
+      Keyboard.write(' ');
     }
     lastButtonPress = millis();
   }
